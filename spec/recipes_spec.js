@@ -62,10 +62,9 @@ describe('readRecipe', function() {
     spyOn(console, 'log');
     addIngredient(recipe, "cheese", "one cup")
     addIngredient(recipe, "coriander", "one teaspoon")
-    readRecipe(recipe);
+    readRecipe(recipe)
     expect(console.log.calls.argsFor(0)).toEqual(["this recipe calls for one cup of cheese"])
     expect(console.log.calls.argsFor(1)).toEqual(["this recipe calls for one teaspoon of coriander"])
   });
 
 });
-
